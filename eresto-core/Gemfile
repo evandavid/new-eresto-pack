@@ -1,0 +1,19 @@
+source 'https://rubygems.org'
+ruby '2.1.5'
+
+gem 'rails', '4.1.6'
+gem 'rails-api'
+gem 'pg'
+gem 'devise'
+gem 'pundit'
+gem 'rabl'
+gem 'devise-encryptable'
+gem 'rack-cors', :require => 'rack/cors'
+gem 'rails-observers'
+gem 'yajl-ruby', require: 'yajl'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'spring'
+  gem 'bullet'
+end
