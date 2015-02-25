@@ -13,31 +13,13 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animate.css" type="text/css" />
+    <link rel="stylesheet" href="styles/font.css" type="text/css" />
+    <link rel="stylesheet" href="styles/app.css" type="text/css" />
     <!-- endbuild -->
   </head>
   <body ng-app="erestoClientApp">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#/">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#/">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">erestoClient</h3>
-      </div>
-
-      <div ng-view></div>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
+    <div class="app" id="app" ui-view ng-class="{'app-header-fixed':app.settings.headerFixed, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container}" ></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

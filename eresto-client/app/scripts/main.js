@@ -10,12 +10,20 @@ require.config({
     'angular-sanitize': '../../bower_components/angular-sanitize/angular-sanitize',
     'angular-scenario': '../../bower_components/angular-scenario/angular-scenario',
     'angular-touch': '../../bower_components/angular-touch/angular-touch',
-    bootstrap: '../../bower_components/bootstrap/dist/js/bootstrap'
+    bootstrap: '../../bower_components/bootstrap/dist/js/bootstrap',
+    'ui.router': '../../bower_components/ui-router/release/angular-ui-router',
+    'ui.bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap'
   },
   shim: {
     angular: {
       exports: 'angular'
     },
+    'ui.router': [
+      'angular'
+    ],
+    'ui.bootstrap': [
+      'angular'
+    ],
     'angular-route': [
       'angular'
     ],
@@ -60,7 +68,9 @@ require([
   'angular-sanitize',
   'angular-resource',
   'angular-animate',
-  'angular-touch'
+  'angular-touch',
+  'ui.router',
+  'ui.bootstrap'
 ], function(angular, app, ngRoutes, ngCookies, ngSanitize, ngResource, ngAnimate, ngTouch) {
   'use strict';
   /* jshint ignore:start */
