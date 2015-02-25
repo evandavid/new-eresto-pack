@@ -5131,3 +5131,54 @@ a.text-#000000:hover {
     background-color: #7266ba;
   }
 }
+
+/*added style*/
+
+
+.login-container {
+    min-height: 100%;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+.login-container {
+    background-image: url(/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+@media (min-width: 1120px), (min-height: 630px) {
+    .login-container { background-size: auto; }
+}
+
+.login-notebook {
+  background: none repeat scroll 0 0 #fff;
+  border-radius: 2px;
+  margin-left: 25px;
+  margin-top: 50%;
+  padding: 25px 20px 5px;
+  width: 400px;
+}
+
+.detail-login {
+  color: #fff;
+  margin-right: 25px;
+  margin-top: 30%;
+  text-align: right;
+}
+
+.detail-login h1 {
+  font-size: 10rem;
+  line-height: 35px;
+}
+
+.detail-login h3 {
+  font-size: 4rem;
+  line-height: 6px;
+}
+
+.detail-login h4 {
+  font-size: 3rem;
+}

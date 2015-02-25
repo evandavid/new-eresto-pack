@@ -3,6 +3,7 @@ define([
   'angular', 
   'ui.router',
   'ui.bootstrap',
+  'angular-momentjs',
   'controllers/main', 
   'controllers/about', 
   'controllers/sessions'
@@ -30,7 +31,8 @@ define([
     'ngAnimate',
     'ngTouch',
     'ui.router',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'angular-momentjs',
   ])
     .config(function ($stateProvider, $urlRouterProvider) {
       $urlRouterProvider
@@ -82,7 +84,7 @@ define([
 
         .state('sessions', {
           url: '/sessions',
-          template: '<div ui-view class="fade-in-right-big smooth"></div>'
+          template: '<div ui-view class="fade-in-right-big smooth login-container"></div>'
         })
         .state('sessions.signin', {
           url: '/signin',
