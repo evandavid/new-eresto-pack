@@ -3,12 +3,12 @@
     <div class="login-notebook" ng-init="app.settings.container = false;">
       <div>
         <form name="form" class="form-validation">
-          <div class="text-danger wrapper text-center" ng-show="authError">
-              {{authError}}
+          <div class="text-danger wrapper text-center" ng-show="errorAuth != null">
+              {{errorAuth}}
           </div>
           <div class="list-group list-group-sm">
             <div class="list-group-item">
-              <input type="email" placeholder="Email" class="form-control no-border" ng-model="user.email" required>
+              <input type="text" placeholder="Username" class="form-control no-border" ng-model="user.username" required>
             </div>
             <div class="list-group-item">
                <input type="password" placeholder="Password" class="form-control no-border" ng-model="user.password" required>

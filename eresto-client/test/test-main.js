@@ -22,7 +22,12 @@ requirejs.config({
     'angular-sanitize': '../../bower_components/angular-sanitize/angular-sanitize',
     'angular-scenario': '../../bower_components/angular-scenario/angular-scenario',
     'angular-touch': '../../bower_components/angular-touch/angular-touch',
-    bootstrap: '../../bower_components/bootstrap/dist/js/bootstrap'
+    bootstrap: '../../bower_components/bootstrap/dist/js/bootstrap',
+    'ui.router': '../../bower_components/ui-router/release/angular-ui-router',
+    'ui.bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap',
+    'angular-momentjs': '../../bower_components/angular-momentjs/angular-momentjs',
+    'angular-bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap-tpls',
+    'ui-router': '../../bower_components/ui-router/release/angular-ui-router'
   },
 
     shim: {

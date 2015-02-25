@@ -3,11 +3,12 @@ define([
   'angular', 
   'ui.router',
   'ui.bootstrap',
-  'angular-momentjs',
+  'restangular',
   'controllers/main', 
   'controllers/about', 
-  'controllers/sessions'
-  ]/*deps*/, function (angular)/*invoke*/ {
+  'controllers/sessions', 
+  'services/user', 
+  'services/session']/*deps*/, function (angular)/*invoke*/ {
   'use strict';
 
   /**
@@ -23,7 +24,9 @@ define([
     'erestoClientApp.controllers.MainCtrl',
     'erestoClientApp.controllers.AboutCtrl',
     'erestoClientApp.controllers.SessionsCtrl',
-    /*angJSDeps*/
+    'erestoClientApp.services.User',
+    'erestoClientApp.services.Session',
+/*angJSDeps*/
     'ngCookies',
     'ngResource',
     'ngSanitize',
@@ -32,9 +35,11 @@ define([
     'ngTouch',
     'ui.router',
     'ui.bootstrap',
-    'angular-momentjs',
+    'restangular'
   ])
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
+      RestangularProvider.setBaseUrl('http://localhost:3000/api/v1/');
+
       $urlRouterProvider
         .otherwise('/dashboard');
       $stateProvider

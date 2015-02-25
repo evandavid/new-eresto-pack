@@ -1,6 +1,6 @@
 class Api::V1::ApplicationController < ApplicationController
   include Pundit
-  # before_action :auth_from_token!
+  before_action :auth_from_token!
 
   protected
     # Auth form token that send by client
