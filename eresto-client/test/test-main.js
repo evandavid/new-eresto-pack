@@ -25,9 +25,10 @@ requirejs.config({
     bootstrap: '../../bower_components/bootstrap/dist/js/bootstrap',
     'ui.router': '../../bower_components/ui-router/release/angular-ui-router',
     'ui.bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap',
-    'angular-momentjs': '../../bower_components/angular-momentjs/angular-momentjs',
     'angular-bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap-tpls',
-    'ui-router': '../../bower_components/ui-router/release/angular-ui-router'
+    'ui-router': '../../bower_components/ui-router/release/angular-ui-router',
+    restangular: '../../bower_components/restangular/dist/restangular',
+    'angular-momentjs': '../../bower_components/angular-momentjs/angular-momentjs'
   },
 
     shim: {

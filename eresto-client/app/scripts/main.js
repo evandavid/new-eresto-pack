@@ -15,7 +15,8 @@ require.config({
     'ui.bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap',
     'angular-bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap-tpls',
     'ui-router': '../../bower_components/ui-router/release/angular-ui-router',
-    'restangular': '../../bower_components/restangular/dist/restangular'
+    restangular: '../../bower_components/restangular/dist/restangular',
+    'angular-momentjs': '../../bower_components/angular-momentjs/angular-momentjs'
   },
   shim: {
     angular: {
@@ -30,7 +31,7 @@ require.config({
     'angular-route': [
       'angular'
     ],
-    'restangular': [
+    restangular: [
       'angular'
     ],
     'angular-cookies': [

@@ -5149,9 +5149,6 @@ a.text-#000000:hover {
     background-position: 0 0;
     background-size: cover;
 }
-@media (min-width: 1120px), (min-height: 630px) {
-    .login-container { background-size: auto; }
-}
 
 .login-notebook {
   background: none repeat scroll 0 0 #fff;
