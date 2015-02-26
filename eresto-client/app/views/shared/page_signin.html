@@ -8,13 +8,13 @@
           </div>
           <div class="list-group list-group-sm">
             <div class="list-group-item">
-              <input type="text" placeholder="Username" class="form-control no-border" ng-model="user.username" required>
+              <input type="text" placeholder="Username" class="form-control no-border" ng-model="user.username" required autofocus>
             </div>
             <div class="list-group-item">
                <input type="password" placeholder="Password" class="form-control no-border" ng-model="user.password" required>
             </div>
           </div>
-          <button type="submit" class="btn btn-lg btn-info btn-block" ng-click="login()" ng-disabled='form.$invalid'>Log in</button>
+          <button type="submit" class="btn btn-lg btn-info btn-block" ng-click="login()" ng-disabled='form.$invalid' ng-bind-html="login_label"></button>
           <div class="m-t m-b"><a ui-sref="access.forgotpwd">Forgot password?</a></div>
         </form>
       </div>

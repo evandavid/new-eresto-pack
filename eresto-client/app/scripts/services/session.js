@@ -10,11 +10,11 @@ define(['angular'], function (angular) {
    */
   angular.module('erestoClientApp.services.Session', [])
 	.service('Session', function (Restangular) {
-    var session_endpoint = "sessions";
+    var SESSION_ENDPOINT = 'sessions';
 
     this.doLogin = function(user) {
       var data = {user: user};
-      return Restangular.all(session_endpoint).post(data);
+      return Restangular.all(SESSION_ENDPOINT).post(data);
     };
 	});
 });

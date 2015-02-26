@@ -10,13 +10,13 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/animate.css" type="text/css" />
     <link rel="stylesheet" href="styles/font.css" type="text/css" />
     <link rel="stylesheet" href="styles/app.css" type="text/css" />
-    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
   </head>
   <body ng-app="erestoClientApp">
     <div class="app" id="app" ui-view ng-class="{'app-header-fixed':app.settings.headerFixed, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container}" ></div>
@@ -38,6 +38,7 @@
     <script src="bower_components/json3/lib/json3.js"></script>
     <![endif]-->
     <!-- endbuild -->
+    <script src="scripts/jquery.min.js" ></script>
     <script src="scripts/lodash.min.js" ></script>
     <script src="bower_components/requirejs/require.js" data-main="scripts/main.js"></script>
   </body>

@@ -28,7 +28,8 @@ requirejs.config({
     'angular-bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap-tpls',
     'ui-router': '../../bower_components/ui-router/release/angular-ui-router',
     restangular: '../../bower_components/restangular/dist/restangular',
-    'angular-momentjs': '../../bower_components/angular-momentjs/angular-momentjs'
+    'angular-momentjs': '../../bower_components/angular-momentjs/angular-momentjs',
+    'angular-fontawesome': '../../bower_components/angular-fontawesome/dist/angular-fontawesome'
   },
 
     shim: {

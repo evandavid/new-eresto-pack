@@ -8,7 +8,7 @@ define([
   'controllers/about', 
   'controllers/sessions', 
   'services/user', 
-  'services/session']/*deps*/, function (angular)/*invoke*/ {
+  'services/session', 'directives/global']/*deps*/, function (angular, GlobalDirective)/*invoke*/ {
   'use strict';
 
   /**
@@ -26,6 +26,7 @@ define([
     'erestoClientApp.controllers.SessionsCtrl',
     'erestoClientApp.services.User',
     'erestoClientApp.services.Session',
+'erestoClientApp.directives.Global',
 /*angJSDeps*/
     'ngCookies',
     'ngResource',
@@ -39,47 +40,17 @@ define([
   ])
     .config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
       RestangularProvider.setBaseUrl('http://localhost:3000/api/v1/');
+      String.prototype.capitalizeFirstLetter = function() {
+        return this.charAt(0).toUpperCase() + this.slice(1);
+      };
 
       $urlRouterProvider
         .otherwise('/dashboard');
       $stateProvider
         .state('app', {
-          abstract: true,
           url: '',
           templateUrl: 'views/shared/app.html',
-          controller: function($scope, $cookieStore, $location, $state){
-            // config
-            $scope.app = {
-              name: 'Angulr',
-              version: '2.0.0',
-              // for chart colors
-              color: {
-                primary: '#7266ba',
-                info:    '#23b7e5',
-                success: '#27c24c',
-                warning: '#fad733',
-                danger:  '#f05050',
-                light:   '#e8eff0',
-                dark:    '#3a3f51',
-                black:   '#1c2b36'
-              },
-              settings: {
-                themeID: 10,
-                navbarHeaderColor: 'bg-info dker',
-                navbarCollapseColor: 'bg-info dk',
-                asideColor: 'bg-black',
-                headerFixed: true,
-                asideFixed: false,
-                asideFolded: false,
-                asideDock: false,
-                container: false
-              }
-            };
-
-            if (!$cookieStore.get('signed_in') || $cookieStore.get('signed_in') === undefined){
-              $state.go('sessions.signin');
-            }
-          }
+          controller: "MainCtrl"
         })
 
         .state('app.dashboard', {

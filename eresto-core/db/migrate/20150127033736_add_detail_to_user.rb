@@ -5,7 +5,7 @@ class AddDetailToUser < ActiveRecord::Migration
     add_column  :users, :username,              :string
 
     add_index   :users, :authentication_token,  unique: true
-    add_index   :users, :username,              unique: true
+    add_index   :users, :username
     add_index   :users, :role
   end
 end
